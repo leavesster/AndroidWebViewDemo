@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         webView!!.settings.allowFileAccess = true
         loadLocalHtml()
 //        loadLocalhost()
+        webView!!.webViewClient = DemoWebViewClient()
     }
 
     private fun loadLocalHtml() {
