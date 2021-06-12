@@ -12,5 +12,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         webView = findViewById<WebView>(R.id.webView)
+        loadLocalHtml()
     }
+
+    private fun loadLocalHtml() {
+        webView?.loadUrl("file:///android_asset/index.html")
+    }
+
 }
